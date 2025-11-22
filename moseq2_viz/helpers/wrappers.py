@@ -599,8 +599,6 @@ def make_df_wrapper(model_file, index_file, output_file: "Path", save_extension)
 
     if save_extension == "csv":
         moseq_df.to_csv(output_file)
-    elif save_extension == "parquet":
-        moseq_df.to_parquet(output_file, compression="brotli")
     
     # also compute averages across sessions
     count = "usage"
