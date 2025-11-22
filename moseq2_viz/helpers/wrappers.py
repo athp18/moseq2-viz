@@ -614,5 +614,3 @@ def make_df_wrapper(model_file, index_file, output_file: "Path", save_extension)
 
     if save_extension == "csv":
         stats_df.to_csv(output_file.with_name(output_file.stem + "_stats.csv"))
-    elif save_extension == "parquet":
-        stats_df.to_parquet(output_file.with_name(output_file.stem + "_stats.parquet"), compression="brotli")
